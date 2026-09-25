@@ -8,6 +8,7 @@ Monitor ground movement, inspect node health, and act on risk signals from one f
 
 <p>
   <a href="https://github.com/vedantachari/mine-subsidance-AI"><img src="https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github" alt="GitHub repository"></a>
+  <a href="https://my-2cegqhdl8-innovison.vercel.app/"><img src="https://img.shields.io/badge/Live-Dashboard-00C7B7?style=flat-square&logo=vercel&logoColor=white" alt="Open live dashboard"></a>
   <img src="https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js" alt="Next.js 16">
   <img src="https://img.shields.io/badge/TypeScript-Ready-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/AWS-IoT%20%2B%20DynamoDB-FF9900?style=flat-square&logo=amazonaws&logoColor=white" alt="AWS IoT and DynamoDB">
@@ -18,6 +19,8 @@ Monitor ground movement, inspect node health, and act on risk signals from one f
 </a>
 
 </div>
+
+### [Open the live dashboard](https://my-2cegqhdl8-innovison.vercel.app/)
 
 ## Why this exists
 
