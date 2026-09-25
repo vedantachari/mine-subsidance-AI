@@ -1,0 +1,70 @@
+import type { NodeStatus } from "@/types/api";
+
+export type GatewayTelemetry = {
+  node_id?: string;
+  n?: string;
+  latitude?: number;
+  longitude?: number;
+  la?: number;
+  lo?: number;
+  roll_deg?: number;
+  pitch_deg?: number;
+  tilt?: Array<{ roll_deg: number; pitch_deg: number }>;
+  r?: number;
+  p?: number;
+  vibration_rms_g?: number;
+  vibration?: number[];
+  v?: number;
+  peak_g?: number;
+  pk?: number;
+  peak_to_peak_g?: number;
+  pp?: number;
+  dominant_frequency_hz?: number;
+  f?: number;
+  rssi_dbm?: number;
+  rssi?: number;
+  snr_db?: number;
+  snr?: number;
+  battery_percent?: number;
+  battery?: number;
+  altitude_m?: number;
+  alt?: number;
+  satellites?: number;
+  s?: number;
+  gps_fix?: boolean;
+  c?: number;
+  timestamp?: string;
+  received_at?: string;
+};
+
+export type RiskAnalysis = {
+  score: number;
+  level: NodeStatus;
+  warning: boolean;
+  tilt_magnitude_deg: number;
+  tilt_change_deg: number;
+  tilt_rate_deg_per_hour: number;
+  vibration_change_g: number;
+  frequency_change_hz: number;
+  tilt_z_score: number;
+  vibration_z_score: number;
+  ewma_tilt: number;
+  ewma_vibration: number;
+  cusum_tilt: number;
+  cusum_vibration: number;
+  persistence_windows: number;
+};
+
+export type AnalyzedTelemetry = {
+  node_id: string;
+  latitude: number;
+  longitude: number;
+  status: NodeStatus;
+  risk_score: number;
+  last_seen: string;
+  tilt: { roll_deg: number; pitch_deg: number; samples: Array<{ roll_deg: number; pitch_deg: number }> };
+  vibration: { rms_g: number; peak_g: number; peak_to_peak_g: number; dominant_frequency_hz: number; samples: number[] };
+  network: { rssi_dbm: number; snr_db: number };
+  power: { battery_percent: number };
+  risk: RiskAnalysis;
+};
